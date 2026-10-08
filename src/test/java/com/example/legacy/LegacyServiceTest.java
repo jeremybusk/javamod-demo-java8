@@ -1,15 +1,15 @@
 package com.example.legacy;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class LegacyServiceTest {
+class LegacyServiceTest {
     @Test
-    public void filtersNames() {
+    void filtersNames() {
         LegacyService service = new LegacyService();
         assertEquals(Arrays.asList("Ada", "Grace"),
                 service.activeNames(Arrays.asList(" Ada ", null, "", "Grace")));

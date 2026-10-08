@@ -10,7 +10,7 @@ import java.util.List;
 /** Intentionally dated Java 8 code used to exercise migration recipes. */
 public class LegacyService {
     public Integer boxedPort(String value) {
-        return new Integer(value);
+        return Integer.valueOf(value);
     }
 
     public URL endpoint(String value) throws MalformedURLException {
@@ -18,7 +18,7 @@ public class LegacyService {
     }
 
     public List<String> activeNames(List<String> names) {
-        List<String> result = new ArrayList<String>();
+        List<String> result = new ArrayList<>();
         for (String name : names) {
             if (name != null && name.trim().length() > 0) {
                 result.add(name.trim());
